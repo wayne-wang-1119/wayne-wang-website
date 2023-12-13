@@ -1,0 +1,11 @@
+/* AboutMe.css */
+.about-me-container {
+  background-color: #f8f8f8; /* Light background for readability */
+  color: #333; /* Dark text for contrast */
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #003262; /* UC Berkeley navy blue for a personal touch */
+}
