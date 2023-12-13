@@ -33,6 +33,13 @@ const Project = () => {
       description: "Got bored so I made my own personal website with React",
       githubUrl: "https://github.com/wayne-wang-1119/wayne-wang-website",
     },
+    {
+      name: "County Housing Data Analysis",
+      description:
+        "Classic Data 100 project, analyzing housing data in Alameda County",
+      githubUrl:
+        "https://github.com/wayne-wang-1119/CCAO-project-data-analysis-data100",
+    },
   ];
 
   return (
