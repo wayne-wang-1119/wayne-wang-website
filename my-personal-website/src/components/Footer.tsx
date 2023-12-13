@@ -13,7 +13,7 @@ const Footer = () => {
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/wayne-wang-380029197/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -22,7 +22,7 @@ const Footer = () => {
         </li>
         <li>
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/wayne-wang-1119"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -31,7 +31,7 @@ const Footer = () => {
         </li>
         <li>
           <a
-            href="https://twitter.com/your-twitter"
+            href="https://twitter.com/thehaohanwang"
             target="_blank"
             rel="noopener noreferrer"
           >
