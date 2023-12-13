@@ -1,25 +1,41 @@
+// src/pages/Project.tsx
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import "./Project.css"; // Ensure you have the corresponding CSS file
 
-const Project = () => (
-  <div>
-    <h1>Projects</h1>
-    <div>
-      <h2>Berkeley Wireless Research Center AMS</h2>
-      <p>Description of the project...</p>
+const Project = () => {
+  const projects = [
+    {
+      name: "CktGym",
+      description: "Description for Project One",
+      githubUrl: "https://github.com/your-username/project-one",
+    },
+    {
+      name: "Project Two",
+      description: "Description for Project Two",
+      githubUrl: "",
+    },
+  ];
+
+  return (
+    <div className="project-container">
+      {projects.map((project, index) => (
+        <div className="project-block" key={index}>
+          <h1 className="project-title">{project.name}</h1>
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FontAwesomeIcon icon={faGithub} className="github-icon" />
+          </a>
+          <p className="project-description">{project.description}</p>
+        </div>
+      ))}
     </div>
-    <div>
-      <h2>Micro-services Based User Management System</h2>
-      <p>Description of the project...</p>
-    </div>
-    <div>
-      <h2>Pirates of the Caribbean Game Development</h2>
-      <p>Description of the project...</p>
-    </div>
-    <div>
-      <h2>Web-based TikTok-like Application</h2>
-      <p>Description of the project...</p>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Project;
