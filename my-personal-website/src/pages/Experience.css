@@ -1,0 +1,51 @@
+.experience-container {
+  background-color: #46535e; /* Dark background */
+  color: #c4820e; /* Subtitle or text color */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.experience-title {
+  color: #fdb515; /* Title color */
+  margin-bottom: 15px;
+}
+
+.experience-subtitle {
+  color: #c4820e; /* Subtitle color */
+}
+
+.experience-block {
+  display: grid;
+  grid-template-columns: auto 1fr; /* First column for logo and info, second for details */
+  gap: 20px; /* Space between columns */
+  background-color: #46535e; /* Dark background */
+  color: white; /* Text color */
+  padding: 20px;
+  align-items: start; /* Align grid items to the start of the cell */
+}
+
+.experience-logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  grid-row: 1 / span 2; /* Logo spans two rows to align with both title and subtitle */
+}
+.experience-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-role,
+.experience-dates {
+  color: #c4820e; /* Role and dates color */
+  margin: 0;
+}
+
+.experience-details ul {
+  list-style-type: none; /* No bullets */
+  padding: 0; /* No padding */
+  margin: 0; /* Aligns with the start of the grid */
+}
+
+.experience-details li {
+  margin-bottom: 10px; /* Space between list items */
+}
