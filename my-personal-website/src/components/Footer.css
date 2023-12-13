@@ -1,5 +1,5 @@
 footer {
-  background-color: #aba0a0;
+  background-color: #c4820e;
   padding: 10px;
   text-align: center;
 }
@@ -16,9 +16,9 @@ footer li {
 
 footer a {
   text-decoration: none;
-  color: #333;
+  color: #003262;
 }
 
 footer a:hover {
-  color: #007bff;
+  color: #3b7ea1;
 }
