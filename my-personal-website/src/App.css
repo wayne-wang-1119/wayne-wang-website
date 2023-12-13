@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* Example in src/index.css or src/App.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Choose a modern, clean font */
+  background-color: #0a192f; /* Consistent background color */
+  color: white; /* Consistent text color */
+}
+
+a {
+  color: #64ffda; /* Accent color for links */
+}
+
+a:hover {
+  color: #fff;
+}
