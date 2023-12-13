@@ -1,0 +1,26 @@
+/* Project.css */
+.project-container {
+  background-color: #46535e; /* Background color */
+  padding: 20px;
+}
+
+.project-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  margin-right: 10px;
+  color: #fdb515; /* Title color */
+}
+
+.github-icon {
+  color: white;
+  font-size: 1.5rem; /* Adjust the icon size */
+  margin-right: 5px;
+}
+
+.project-description {
+  color: #c4820e; /* Description color */
+}
