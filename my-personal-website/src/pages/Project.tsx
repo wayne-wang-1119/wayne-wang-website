@@ -8,13 +8,30 @@ const Project = () => {
   const projects = [
     {
       name: "CktGym",
-      description: "Description for Project One",
-      githubUrl: "https://github.com/your-username/project-one",
+      description:
+        "A web application for circuit parameters training for ML Researchers",
+      githubUrl: "https://github.com/BWRC-AMS-ML-Discovery/BwrcAmsMlDiscovery",
     },
     {
-      name: "Project Two",
-      description: "Description for Project Two",
-      githubUrl: "",
+      name: "FindMoney",
+      description:
+        "A Flutter application to help established businesses find others like them",
+      githubUrl: "https://github.com/wayne-wang-1119/findmoney",
+    },
+    {
+      name: "GotHub",
+      description: "Essentially GPT Store, but before GPT Store came out",
+      githubUrl: "https://github.com/wayne-wang-1119/Gothub",
+    },
+    {
+      name: "Pirates of the Caribbean",
+      description: "Game in Java, find the treasure box in the dungeon",
+      githubUrl: "https://github.com/wayne-wang-1119/Pirates-of-The-Caribbean",
+    },
+    {
+      name: "Personal Website",
+      description: "Got bored so I made my own personal website with React",
+      githubUrl: "https://github.com/wayne-wang-1119/wayne-wang-website",
     },
   ];
 
