@@ -2,9 +2,9 @@ import React from "react";
 
 const MainContent = () => (
   <main>
-    <section>
-      {/* Main content such as a brief introduction or featured work */}
-    </section>
+    <div className="hero-section">
+      <div className="hero-content"></div>
+    </div>
   </main>
 );
 
