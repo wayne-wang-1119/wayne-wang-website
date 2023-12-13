@@ -8,11 +8,14 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/experience">Past Experience</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/course">Courses</Link>
+            <Link to="/experience">Past Experience</Link>
           </li>
+          {/* <li>
+            <Link to="/course">Courses</Link>
+          </li> */}
           <li>
             <Link to="/project">Projects</Link>
           </li>
