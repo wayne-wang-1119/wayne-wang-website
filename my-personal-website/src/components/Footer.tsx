@@ -5,45 +5,41 @@ import {
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#c4820e] py-2.5 text-center">
-      <nav className="container mx-auto">
-        <ul className="list-none p-0 flex justify-center items-center">
-          <li className="inline-block mx-2.5">
-            <Link
-              to="https://www.linkedin.com/in/wayne-wang-380029197/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline text-[#003262] hover:text-[#3b7ea1]"
-            >
-              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
-            </Link>
-          </li>
-          <li className="inline-block mx-2.5">
-            <Link
-              to="https://github.com/wayne-wang-1119"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline text-[#003262] hover:text-[#3b7ea1]"
-            >
-              <FontAwesomeIcon icon={faGithub} /> GitHub
-            </Link>
-          </li>
-          <li className="inline-block mx-2.5">
-            <Link
-              to="https://twitter.com/thehaohanwang"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline text-[#003262] hover:text-[#3b7ea1]"
-            >
-              <FontAwesomeIcon icon={faTwitter} /> Twitter
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <footer className="bg-gray-800 py-4 text-center">
+      <div className="container mx-auto">
+        <div className="flex justify-center space-x-6">
+          <a
+            href="https://www.linkedin.com/in/wayne-wang-380029197/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-800 text-white hover:text-[#3b7ea1] flex items-center space-x-1"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/wayne-wang-1119"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-800 text-white hover:text-[#3b7ea1] flex items-center space-x-1"
+          >
+            <FontAwesomeIcon icon={faGithub} size="lg" />
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://twitter.com/thehaohanwang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-800 text-white hover:text-[#3b7ea1] flex items-center space-x-1"
+          >
+            <FontAwesomeIcon icon={faTwitter} size="lg" />
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
     </footer>
   );
 };
