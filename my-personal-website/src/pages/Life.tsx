@@ -1,6 +1,6 @@
 // src/pages/AboutMe.tsx
 import React from "react";
-import "./Life.css"; // Make sure to have an accompanying CSS file
+import "./Life.css";
 
 const AboutMe = () => (
   <div className="about-me-container">

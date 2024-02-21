@@ -9,28 +9,42 @@ const Project = () => {
     {
       name: "CktGym",
       description:
-        "A web application for circuit parameters training for ML Researchers",
+        "Decentralized solution for training circuits and optimizing designs, included in ZeroASIC, funded by millions",
       githubUrl: "https://github.com/BWRC-AMS-ML-Discovery/BwrcAmsMlDiscovery",
+    },
+    {
+      name: "GotHub",
+      description:
+        "Essentially GPT Store, but before GPT Store came out, invested by MiraclePlus",
+      githubUrl: "https://github.com/wayne-wang-1119/Gothub",
+    },
+    {
+      name: "Reunion",
+      description:
+        "Few-shot clone human voice and chat history to preserve your loved ones forever",
+      githubUrl: "https://github.com/wayne-wang-1119/Reunion",
+    },
+    {
+      name: "AdversarialCNN",
+      description:
+        "Capstone project for MEng showcase. Use image pattern recognition for candlestick image classification",
+      githubUrl: "https://github.com/wayne-wang-1119/Reunion",
     },
     {
       name: "FindMoney",
       description:
-        "A Flutter application to help established businesses find others like them",
-      githubUrl: "https://github.com/wayne-wang-1119/findmoney",
-    },
-    {
-      name: "GotHub",
-      description: "Essentially GPT Store, but before GPT Store came out",
-      githubUrl: "https://github.com/wayne-wang-1119/Gothub",
+        "A Flutter application to help established businesses find others like them, invested by Angels for $500K",
+      githubUrl: "https://github.com/wayne-wang-1119/AdversarialCNN",
     },
     {
       name: "Pirates of the Caribbean",
-      description: "Game in Java, find the treasure box in the dungeon",
+      description: "CS61B Game in Java, find the treasure box in the dungeon",
       githubUrl: "https://github.com/wayne-wang-1119/Pirates-of-The-Caribbean",
     },
     {
       name: "Personal Website",
-      description: "Got bored so I made my own personal website with React",
+      description:
+        "Got bored so I made my own personal website with TypeScript + Tailwind",
       githubUrl: "https://github.com/wayne-wang-1119/wayne-wang-website",
     },
     {
@@ -43,21 +57,31 @@ const Project = () => {
   ];
 
   return (
-    <div className="project-container">
-      {projects.map((project, index) => (
-        <div className="project-block" key={index}>
-          <h1 className="project-title">{project.name}</h1>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <FontAwesomeIcon icon={faGithub} className="github-icon" />
-          </a>
-          <p className="project-description">{project.description}</p>
+    <div className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                {project.name}
+              </h2>
+              <p className="text-gray-700 mb-4">{project.description}</p>
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+              >
+                <FontAwesomeIcon icon={faGithub} className="mr-2" />
+                View on GitHub
+              </a>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
