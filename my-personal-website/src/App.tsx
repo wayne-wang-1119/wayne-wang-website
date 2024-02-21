@@ -19,7 +19,6 @@ const App = () => {
           {/* <Route path="/course" element={<Course />} /> */}
           <Route path="/project" element={<Project />} />
           <Route path="/life" element={<Life />} />
-          {/* Add more routes as needed */}
         </Routes>
         <Footer />
       </div>
