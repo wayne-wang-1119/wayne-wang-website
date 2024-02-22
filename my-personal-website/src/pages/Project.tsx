@@ -57,18 +57,18 @@ const Project = () => {
   ];
 
   return (
-    <div className="bg-white py-12">
+    <div className="bg-gray-800 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-500 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">
+              <h2 className="text-xl font-semibold text-gray-300 mb-2">
                 {project.name}
               </h2>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <p className="text-gray-300 mb-4">{project.description}</p>
               <a
                 href={project.githubUrl}
                 target="_blank"

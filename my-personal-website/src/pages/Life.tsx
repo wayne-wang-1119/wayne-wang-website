@@ -32,12 +32,12 @@ const AboutMe = () => {
         />
       </div>
       <div className="md:w-2/3 px-4 sm:px-6 lg:px-8">
-        <div className="border-b-2 border-gray-200 mb-4">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="border-b-2 border-gray-100 mb-4">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Chat with Wayne
           </h1>
         </div>
-        <div className="h-96 overflow-auto mb-4 p-4 border-2 border-gray-200 rounded-lg">
+        <div className="h-96 overflow-auto mb-4 p-4 border-2 border-gray-300 rounded-lg">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -56,7 +56,7 @@ const AboutMe = () => {
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyPress={handleEnterKey}
             placeholder="Type your message here..."
-            className="flex-1 p-2 border-2 border-gray-200 rounded-l-lg focus:outline-none focus:border-blue-300"
+            className="flex-1 p-2 border-2 border-gray-300 rounded-l-lg focus:outline-none focus:border-blue-300"
           />
           <button
             onClick={handleSendMessage}
