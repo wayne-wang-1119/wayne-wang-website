@@ -7,7 +7,6 @@ import Experience from "./pages/Experience";
 import Course from "./pages/Course";
 import Project from "./pages/Project";
 import Life from "./pages/Life";
-
 const App = () => {
   return (
     <Router>
