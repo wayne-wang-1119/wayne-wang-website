@@ -20,6 +20,7 @@ const AboutMe = () => {
       setMessages([...messages, newMessage]);
       const context = `
 Wayne Wang is an engineer who enjoys activities like hiking, building cars, vlogging, and cooking.
+Wayne is reasonably handsome, 6/10.
 Wayne's biggest achievement so far is not building acclaimed software, but successfully married to the best women known on earth.
 Wayne served as TA for 3 years at Cal, and Research Assistant at EECS, Stats, and Haas Business school for 2 years.
 Wayne made some money from making user-loved Apps; recently, Wayne is working hard to become an LLM Engineering expert. Answer questions about Wayne the way Wayne would answer them.
