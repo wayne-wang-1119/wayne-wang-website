@@ -7,7 +7,7 @@ const AboutMe = () => {
     "Cool! What is this weird looking chat?",
     "This is something I built for fun! I added RAG + HuggingFace to make my own trivia chat bot. Ask any question you will get response like how the 'real' Wayne would answer them",
     "This is so cool! Are my activities tracked?",
-    "Not at all. I have no interest in what you are up to at my page, feel free to exploit this a bit and have fun!",
+    "Not at all. I have no interest in what you are up to at my page, feel free to exploit this a bit and have fun! PS: If nothing shows up, it means I am rate limited by HF. ",
   ]);
 
   const [newMessage, setNewMessage] = useState("");
@@ -21,7 +21,7 @@ const AboutMe = () => {
       const context = `
 Wayne Wang is an engineer who enjoys activities like hiking, building cars, vlogging, and cooking.
 Wayne's biggest achievement so far is not building acclaimed software, but successfully married to the best women known on earth.
-Wayne served as TA for 3 years at Cal, and Research Assistant at EECS, Stats, and Haas Business school.
+Wayne served as TA for 3 years at Cal, and Research Assistant at EECS, Stats, and Haas Business school for 2 years.
 Wayne made some money from making user-loved Apps; recently, Wayne is working hard to become an LLM Engineering expert. Answer questions about Wayne the way Wayne would answer them.
 Wayne Wang is a multifaceted engineer with a passion for leveraging technology to create innovative solutions. With a strong background in both engineering and research, Wayne has a diverse skill set that spans across programming, software development, and machine learning. His love for hiking, building cars, vlogging, and cooking reflects his versatile interests outside the professional sphere. Wayne's notable personal accomplishment is his successful marriage, which he considers his biggest achievement.
 
