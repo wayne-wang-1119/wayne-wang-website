@@ -4,10 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import { initSDK } from "@hyperdx/node-opentelemetry";
+import { HfInference } from "@huggingface/inference";
 import { Analytics } from "@vercel/analytics/react";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const hf = new HfInference(process.env.HUGGINGFACE_API);
+
 root.render(
   <React.StrictMode>
     <App />

@@ -1,21 +1,76 @@
 import React, { useState } from "react";
 import profilePic from "../images/profilePic.jpg"; // Replace with the path to your image
-
+import { HfInference } from "@huggingface/inference";
 const AboutMe = () => {
   const [messages, setMessages] = useState<string[]>([
-    "Hello! I'm Wayne Wang, an AI researcher and software engineer with a passion for developing innovative solutions. In my professional journey, I've had the privilege of working with cutting-edge technologies at Berkeley EECS and co-founding GotHub.AI, where I manage a significant AI project. I specialize in reinforcement learning, cloud computing, and full-stack development. Outside of work, I'm an avid reader and tech enthusiast. I am always looking for new challenges and opportunities to grow and make a meaningful impact in the field of technology.",
-    "Cool! Is this chat alive?",
-    "Unfortunately as of now it is not. I am investigating how to make it alive with Weaviate and Llama2. Stay tuned!",
+    "Hello! I'm Wayne Wang, an AI researcher and software engineer with a passion for developing innovative solutions.",
+    "Cool! What is this weird looking chat?",
+    "This is something I built for fun! I added RAG + HuggingFace to make my own trivia chat bot. Ask any question you will get response like how the 'real' Wayne would answer them",
+    "This is so cool! Are my activities tracked?",
+    "Not at all. I have no interest in what you are up to at my page, feel free to exploit this a bit and have fun!",
   ]);
+
   const [newMessage, setNewMessage] = useState("");
 
-  const handleSendMessage = () => {
+  const hf = new HfInference(process.env.HUGGINGFACE);
+
+  const handleSendMessage = async () => {
+    console.log(process.env.HUGGINGFACE);
     if (newMessage.trim() !== "") {
       setMessages([...messages, newMessage]);
+      const context = `
+Wayne Wang is an engineer who enjoys activities like hiking, building cars, vlogging, and cooking.
+Wayne's biggest achievement so far is not building acclaimed software, but successfully married to the best women known on earth.
+Wayne served as TA for 3 years at Cal, and Research Assistant at EECS, Stats, and Haas Business school.
+Wayne made some money from making user-loved Apps; recently, Wayne is working hard to become an LLM Engineering expert. Answer questions about Wayne the way Wayne would answer them.
+Wayne Wang is a multifaceted engineer with a passion for leveraging technology to create innovative solutions. With a strong background in both engineering and research, Wayne has a diverse skill set that spans across programming, software development, and machine learning. His love for hiking, building cars, vlogging, and cooking reflects his versatile interests outside the professional sphere. Wayne's notable personal accomplishment is his successful marriage, which he considers his biggest achievement.
+
+Wayne has an extensive educational background from the University of California, Berkeley, where he not only excelled academically but also contributed significantly as a Teaching Assistant and Research Assistant across various departments including EECS, Stats, and the Haas Business School. This experience has equipped him with a unique blend of technical expertise and practical experience in a multidisciplinary environment.
+
+Wayne's Experience and Projects:
+
+Researcher at UC Berkeley EECS: Spearheaded an open-source project, CktGym, achieving significant funding and recognition. Demonstrated expertise in designing and developing hardware RL-based simulation systems, data processing, and monitoring pipelines, enhancing service performance, and scalability.
+
+Founding Software Engineer at GotHub.AI: Engineered a data engine from scratch, securing substantial funding. Showcased skills in developing a MultiAgent Framework, full-stack development, and integrating real-time data manipulation technologies.
+
+Machine Learning Engineer Intern at ColossalAI: Optimized GAN models significantly, showcasing his ability in machine learning and deep learning technologies.
+
+Software Engineer Intern at BART: Developed a full-stack heat map application, enhancing client resource allocation. Implemented a RabbitMQ and Celery pipeline for efficient data processing.
+
+Project Highlights:
+
+Reunion: Designed an AI-generated FaceTime app, integrating advanced text-to-speech and video face swap technologies. Achieved cyber-immortality for users, winning substantial hackathon prizes.
+
+Micro-services Based User Management System: Led the design of a full-stack web application, implementing Docker and Kubernetes for deployment, and developing a real-time UI for user data management.
+
+FindME: Created a multi-platform app for locating entrepreneurs, implementing real-time mapping, and integrating various cloud services and APIs for enhanced functionality.
+`;
+
+      const requestBody = {
+        inputs: {
+          question: newMessage,
+          context: context,
+        },
+      };
+
+      try {
+        const response = await hf.questionAnswering({
+          model: "deepset/roberta-base-squad2",
+          inputs: {
+            question: requestBody.inputs.question,
+            context: requestBody.inputs.context,
+          },
+        });
+        const data = response.answer;
+
+        setMessages((currentMessages) => [...currentMessages, data]);
+      } catch (error) {
+        console.error("Failed to fetch answer from Hugging Face:", error);
+      }
+
       setNewMessage("");
     }
   };
-
   const handleEnterKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleSendMessage();
@@ -55,7 +110,7 @@ const AboutMe = () => {
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyPress={handleEnterKey}
-            placeholder="Type your message here..."
+            placeholder="What is your biggest achievement?..."
             className="flex-1 p-2 border-2 border-gray-300 rounded-l-lg focus:outline-none focus:border-blue-300"
           />
           <button
