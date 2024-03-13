@@ -34,7 +34,7 @@ const Project = () => {
       name: "FindMoney",
       description:
         "A Flutter application to help established businesses find others like them, invested by Angels for $500K",
-      githubUrl: "https://github.com/wayne-wang-1119/AdversarialCNN",
+      githubUrl: "https://github.com/wayne-wang-1119/findmoney",
     },
     {
       name: "Pirates of the Caribbean",
