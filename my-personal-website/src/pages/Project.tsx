@@ -28,7 +28,7 @@ const Project = () => {
       name: "AdversarialCNN",
       description:
         "Capstone project for MEng showcase. Use image pattern recognition for candlestick image classification",
-      githubUrl: "https://github.com/wayne-wang-1119/Reunion",
+      githubUrl: "https://github.com/wayne-wang-1119/AdversarialCNN",
     },
     {
       name: "FindMoney",
