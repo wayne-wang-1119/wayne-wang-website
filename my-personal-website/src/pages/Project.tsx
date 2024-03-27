@@ -19,6 +19,13 @@ const Project = () => {
       githubUrl: "https://github.com/wayne-wang-1119/Gothub",
     },
     {
+      name: "ClipSift: AI Video Digest",
+      description:
+        "ClipSift helps you get best video assets for your vlog / meme / etc. By providing a natural lanaguage description, you can easily query the top relevant YouTube videos and get the most relevant clips to review.",
+      githubUrl:
+        "https://github.com/wayne-wang-1119/ClipSift-AI-Powered-Video-Digest/",
+    },
+    {
       name: "Reunion",
       description:
         "Few-shot clone human voice and chat history to preserve your loved ones forever",
