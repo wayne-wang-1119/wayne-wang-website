@@ -26,7 +26,7 @@ const experiences = [
     logo: gotHubLogo,
     title: "GotHub.AI",
     role: "Founding Software Engineer",
-    dates: "Jun 2023 - Present",
+    dates: "Jun 2023 - Mar 2024",
     bulletPoints: [
       "Designed and built the data engine in 2 months, won $300K Funding from MiraclePlus.",
       "Developed MultiAgent Framework with OpenAI, Llama2 and implemented Django framework, with a focus on scalability.",
