@@ -32,10 +32,11 @@ const Project = () => {
       githubUrl: "https://github.com/wayne-wang-1119/Reunion",
     },
     {
-      name: "AdversarialCNN",
+      name: "Generative-CNN-for-Candlestick-Images",
       description:
-        "Capstone project for MEng showcase. Use image pattern recognition for candlestick image classification",
-      githubUrl: "https://github.com/wayne-wang-1119/AdversarialCNN",
+        "Capstone project for MEng showcase. Use DC-GAN and CNN Inception V3 image pattern recognition for candlestick image classification",
+      githubUrl:
+        "https://github.com/wayne-wang-1119/Generative-CNN-for-Candlestick-Images",
     },
     {
       name: "FindMoney",
